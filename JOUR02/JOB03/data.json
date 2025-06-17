@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "titre": "Faire les courses",
+            "desc": "Acheter du pain, du lait et des œufs",
+            "completed": false
+        },
+        {
+            "id": 2,
+            "titre": "Réviser le cours de maths",
+            "desc": "Étudier les chapitres 3 et 4 pour le contrôle de demain",
+            "completed": true
+        },
+        {
+            "id": 3,
+            "titre": "Envoyer l'email à Paul",
+            "desc": "Répondre au mail concernant le projet de groupe",
+            "completed": false
+        }
+    ]
+}
