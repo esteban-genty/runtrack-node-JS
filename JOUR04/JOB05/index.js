@@ -9,15 +9,26 @@ async function run() {
     console.log("Connecté à MongoDB");
 
     const db = client.db("LaPlateforme");
-
     const studentCollection = db.collection("student");
-    const yearCollection = db.collection("year");
 
-    const allStudents = await studentCollection.find().toArray();
-    const allYears = await yearCollection.find().toArray();
+    const studentsWithYear = await studentCollection.aggregate([
+      {
+        $lookup: {
+          from: "year",   
+          localField: "year_id",
+          foreignField: "_id", 
+          as: "cursus"  
+        }
+      },
+      {
+        $unwind: "$cursus"
+      }
+    ]).toArray();
 
-    console.log("Liste des étudiants :", allStudents);
-    console.log("Liste des années :", allYears);
+    console.log("Étudiants avec cursus :");
+    studentsWithYear.forEach(student => {
+      console.log(`${student.firstname} ${student.lastname} - ${student.cursus.year}`);
+    });
 
   } catch (err) {
     console.error("Erreur de connexion :", err);
