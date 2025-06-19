@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "685413f6e23b3ddc6504a4f9",
+    "id": 1,
+    "lastname": "Genty",
+    "firstname": "Estéban",
+    "students_number": "S98765",
+    "year_id": 2
+  },
+  {
+    "_id": "685419d1d7396c94023c80d3",
+    "firstname": "Bob",
+    "lastname": "LeBricoleur"
+  },
+  {
+    "_id": "685419d1d7396c94023c80d4",
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  {
+    "_id": "685421f796bbb265f581ff98",
+    "firstname": "test",
+    "lastname": "LeBricoleur",
+    "year_id": 1,
+    "id": 1,
+    "students_number": "S123456"
+  }
+]
