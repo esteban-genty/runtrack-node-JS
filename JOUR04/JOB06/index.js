@@ -44,7 +44,7 @@ async function run() {
     });
 
   } catch (err) {
-    console.error("❌ Erreur :", err);
+    console.error("Erreur :", err);
     rl.close();
     await client.close();
   }
