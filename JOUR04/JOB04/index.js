@@ -10,7 +10,7 @@ async function run() {
 
     const db = client.db("LaPlateforme");
 
-    const studentCollection = db.collection("year");
+    const yearCollection = db.collection("year");
 
     const students = [
       { year: "Bachelor 1"},
@@ -19,7 +19,7 @@ async function run() {
 
     ];
 
-    await studentCollection.insertMany(students);
+    await yearCollection.insertMany(students);
     console.log("Bachelor ajoutés");
 
 
