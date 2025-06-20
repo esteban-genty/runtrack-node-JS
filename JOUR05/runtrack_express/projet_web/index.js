@@ -14,7 +14,7 @@ app.get('/about', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send("<div>404 Not Found</div>");
+    res.status(404).sendFile(path.join(__dirname, './views/404.html'));
 });
 
 app.listen(port, () => {
