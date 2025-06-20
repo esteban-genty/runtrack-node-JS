@@ -1,18 +1,18 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
 const port = 80;
 
-//const about = require('');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/index.html'));
-})
+});
 
 app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, './views/about.html'));
-})
+});
 
 app.listen(port, () => {
-  console.log(`Serveur démarré sur http://localhost:${port}`);
+    console.log(`Serveur démarré sur http://localhost:${port}`);
 });

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background-color: gray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(49, 49, 49);
+    height: 200px;
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.header h1{
+    color: white;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header p{
+    color: rgb(206, 206, 206);
+    font-size: 1.2rem;
+}
